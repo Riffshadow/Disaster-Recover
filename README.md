@@ -1,16 +1,58 @@
-# Disaster-Recover
+# Домашнее задание: Настройка HSRP в Cisco Packet Tracer — Иван
 
-Lab work: HSRP configuration in Cisco Packet Tracer.
+## Инструкция по выполнению домашнего задания
 
-## Description
-This project includes:
-- Router configuration (R1, R2)
-- HSRP setup for gateway redundancy
-- Network connectivity test (ping)
-- Packet Tracer topology
+В рамках работы была выполнена настройка отказоустойчивой сети с использованием протокола HSRP в Cisco Packet Tracer.
 
-## Virtual Gateway
-192.168.1.254
+---
 
-## Status
-Completed
+## Задание 1. Цель работы
+
+Настроить резервирование шлюза по умолчанию с использованием HSRP между двумя маршрутизаторами.
+
+---
+
+## Топология сети
+
+В работе использованы следующие устройства:
+- PC-PT (PC0)
+- Switch 2960-24TT
+- Router R1
+- Router R2
+
+Схема подключения:
+- PC подключен к Switch
+- Switch подключен к R1 и R2
+
+---
+
+## IP-адресация
+
+### Router R1:
+- IP-адрес: 192.168.1.1 /24
+
+### Router R2:
+- IP-адрес: 192.168.1.2 /24
+
+### Виртуальный IP (HSRP):
+- 192.168.1.254
+
+---
+
+## Настройка HSRP
+
+### Router R1 (Active):
+- Priority: 110
+- Preempt: включен
+- Virtual IP: 192.168.1.254
+
+### Router R2 (Standby):
+- Priority: 100
+- Preempt: включен
+- Virtual IP: 192.168.1.254
+
+---
+
+## Проверка конфигурации
+
+Для проверки состояния HSRP использовалась команда:
