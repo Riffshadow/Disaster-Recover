@@ -131,5 +131,7 @@ ping 192.168.1.254
 
 ## Скриншоты:
 
-### ![MASTER до отключения nginx](2.1.png)
-### ![BACKUP после failover](2.2.png)
+### до отключения NGINIX
+![MASTER до отключения nginx](2.1.png)
+### ПОСЛЕ
+![BACKUP после failover](2.2.png)
